@@ -39,8 +39,10 @@ urlpatterns = [
 (Optional) Use Http-Only cookies
 
 ```python
-REST_USE_JWT = True
-JWT_AUTH_COOKIE = 'jwt-auth'
+REST_AUTH = {
+    'USE_JWT': True,
+    'JWT_AUTH_COOKIE': 'jwt-auth',
+}
 ```
 
 ### Testing
@@ -76,3 +78,7 @@ View the full documentation here: https://dj-rest-auth.readthedocs.io/en/latest/
 ### Acknowledgements
 
 This project began as a fork of `django-rest-auth`. Big thanks to everyone who contributed to that repo!
+
+#### A note on Django AllAuth from @iMerica
+
+This project has an optional and very narrow support for Django-AllAuth. As maintainer I have no intererest in making this package support every and all use case in Django All Auth. I would rather focus on improving the quality of the base funtionality or focus on OIDC support instead. Pull requests that extend or add more support for Django AllAuth will most likely be declined. Do you disagreee? Feel free to fork this repo!
